@@ -1,0 +1,7 @@
+{
+  "name": "npm-example",
+  "version": "1.0.0",
+  "dependencies": {
+      "mquery": "2.3.2"
+  }
+}
