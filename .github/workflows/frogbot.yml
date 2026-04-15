@@ -22,7 +22,9 @@ jobs:
         with:
           python-version: "3.x"
 
-
+      - name: Set the variable
+        run: echo "MY_VARIABLE=hello-world" >> $GITHUB_ENV
+        run: echo "JF_SAST_DEFAULT_SCAN_MODE=file" >> $GITHUB_ENV
 
       - uses: jfrog/frogbot@v2
         env:
@@ -55,7 +57,7 @@ jobs:
           # in Artifactory, which proxies https://releases.jfrog.io
           # The 'frogbot' executable and other tools it needs will be downloaded through this repository.
           # JF_RELEASES_REPO: ""
-          JF_SAST_DEFAULT_SCAN_MODE: "file"
+          JF_SAST_DEFAULT_SCAN_MODE: "directory"
 
 
 
