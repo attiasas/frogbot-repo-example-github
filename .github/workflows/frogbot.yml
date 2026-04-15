@@ -25,6 +25,7 @@ jobs:
         env:
           # [Mandatory]
           # JFrog platform URL
+          JF_SAST_DEFAULT_SCAN_MODE: directory
           JF_URL: ${{ secrets.JF_URL }}
 
           # [Mandatory if JF_USER and JF_PASSWORD are not provided]
@@ -52,7 +53,6 @@ jobs:
           # in Artifactory, which proxies https://releases.jfrog.io
           # The 'frogbot' executable and other tools it needs will be downloaded through this repository.
           # JF_RELEASES_REPO: ""
-          JF_SAST_DEFAULT_SCAN_MODE: directory
 
 
 
