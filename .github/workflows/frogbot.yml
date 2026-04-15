@@ -29,6 +29,7 @@ jobs:
         env:
           # [Mandatory]
           # JFrog platform URL
+          JF_SAST_DEFAULT_SCAN_MODE: directory
           JF_URL: ${{ secrets.JF_URL }}
 
           # [Mandatory if JF_USER and JF_PASSWORD are not provided]
