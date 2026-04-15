@@ -11,6 +11,8 @@ jobs:
     # A pull request needs to be approved, before Frogbot scans it. Any GitHub user who is associated with the
     # "frogbot" GitHub environment can approve the pull request to be scanned.
     environment: frogbot
+    env:
+      JF_SAST_DEFAULT_SCAN_MODE: directory
     steps:
       - uses: actions/checkout@v3
         with:
@@ -25,7 +27,6 @@ jobs:
         env:
           # [Mandatory]
           # JFrog platform URL
-          JF_SAST_DEFAULT_SCAN_MODE: directory
           JF_URL: ${{ secrets.JF_URL }}
 
           # [Mandatory if JF_USER and JF_PASSWORD are not provided]
