@@ -11,9 +11,6 @@ jobs:
     # A pull request needs to be approved, before Frogbot scans it. Any GitHub user who is associated with the
     # "frogbot" GitHub environment can approve the pull request to be scanned.
     environment: frogbot
-    env:
-      JF_SAST_DEFAULT_SCAN_MODE: file
-
 
     steps:
       - uses: actions/checkout@v3
@@ -24,6 +21,9 @@ jobs:
       - uses: actions/setup-python@v3
         with:
           python-version: "3.x"
+
+      - name: Set scan mode
+        run: echo "JF_SAST_DEFAULT_SCAN_MODE=file" >> $GITHUB_ENV
 
       - uses: jfrog/frogbot@v2
         env:
