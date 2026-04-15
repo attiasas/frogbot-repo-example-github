@@ -12,7 +12,7 @@ jobs:
     # "frogbot" GitHub environment can approve the pull request to be scanned.
     environment: frogbot
     env:
-      JF_SAST_DEFAULT_SCAN_MODE: directory
+      JF_SAST_DEFAULT_SCAN_MODE: file
     steps:
       - uses: actions/checkout@v3
         with:
