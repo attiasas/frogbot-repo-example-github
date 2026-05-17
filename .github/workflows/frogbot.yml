@@ -8,6 +8,7 @@ permissions:
 
 env:
   JF_SAST_DEFAULT_SCAN_MODE: file
+  JFROG_CLI_LOG_LEVEL: DEBUG
   
 jobs:
   scan-pull-request:
