@@ -7,7 +7,7 @@ permissions:
   contents: read
 
 env:
-  JF_SAST_DEFAULT_SCAN_MODE: file
+  JF_SAST_DEFAULT_SCAN_MODE: codebase
   JFROG_CLI_LOG_LEVEL: DEBUG
   
 jobs:
