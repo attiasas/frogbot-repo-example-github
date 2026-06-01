@@ -18,10 +18,11 @@ jobs:
     environment: frogbot
 
     steps:
+      - name: Set the variable
+        run: echo "JF_SAST_DEFAULT_SCAN_MODE=file" >> $GITHUB_ENV    
       - uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-
       # Install prerequisites
       - uses: actions/setup-python@v3
         with:
