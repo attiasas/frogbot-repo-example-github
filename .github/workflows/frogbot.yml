@@ -28,6 +28,10 @@ jobs:
         with:
           python-version: "3.x"
 
+
+      - name: Set scan mode
+        run: echo "JF_SAST_DEFAULT_SCAN_MODE=file" >> $GITHUB_ENV
+
       - uses: jfrog/frogbot@v2
         env:
           # [Mandatory]
