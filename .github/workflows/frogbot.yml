@@ -17,6 +17,7 @@ jobs:
     # "frogbot" GitHub environment can approve the pull request to be scanned.
     environment: frogbot
 
+
     steps:
       - name: Set the variable
         run: echo "JF_SAST_DEFAULT_SCAN_MODE=file" >> $GITHUB_ENV    
